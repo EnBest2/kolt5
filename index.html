@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pénzügyi Nyilvántartó</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pénzügyi Nyilvántartó</h1>
+    <button id="toggleMode">🌙 Sötét mód</button>
+  </header>
+
+  <section id="inputSection">
+    <h2>Új tranzakció hozzáadása</h2>
+    <input type="text" id="description" placeholder="Megnevezés">
+    <input type="number" id="amount" placeholder="Összeg">
+    <select id="category">
+      <!-- A kategória lista dinamikusan töltődik be -->
+    </select>
+    <button onclick="addTransaction()">Hozzáadás</button>
+  </section>
+
+  <section id="customCategorySection">
+    <h2>Egyéni kategória hozzáadása</h2>
+    <input type="text" id="newCategory" placeholder="Új kategória neve (emoji nélkül)">
+    <button onclick="addCategory()">➕ Kategória hozzáadása</button>
+  </section>
+
+  <section id="transactionSection">
+    <h2>Tranzakciók</h2>
+    <ul id="transactions"></ul>
+    <p>Összeg: <span id="total">0</span> Ft</p>
+  </section>
+
+  <section id="history">
+    <h2>Pénzügyi Napló 📖</h2>
+    <button onclick="previousMonth()">⬅ Előző hónap</button>
+    <button onclick="nextMonth()">➡ Következő hónap</button>
+    <p id="currentMonth"></p>
+  </section>
+
+  <section id="chartSection">
+    <h2>Grafikon a költési szokásokról</h2>
+    <canvas id="chart"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
