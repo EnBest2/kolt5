@@ -1,0 +1,108 @@
+/* Alap dizájn */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+  margin: 0;
+}
+
+section {
+  margin: 20px 0;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Sötét mód stílusok */
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode header {
+  background-color: #333;
+  border-bottom: 1px solid #555;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode button {
+  border: 1px solid #555;
+}
+
+.dark-mode button {
+  background-color: #555;
+}
+
+/* Canvas megjelenés */
+#chart {
+  max-width: 400px;
+  margin: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Reszponzív kialakítás mobil eszközökre */
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header, section {
+    padding: 10px;
+  }
+  
+  /* Az input, select és gombok teljes szélességűek */
+  input, select, button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* A canvas elemet rugalmasan méretezzük */
+  #chart {
+    width: 100%;
+    height: auto;
+  }
+}
